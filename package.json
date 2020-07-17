@@ -1,0 +1,11 @@
+{
+  "name": "nl.homewizard",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {
+    "homey": "^2.5.1"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
