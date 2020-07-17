@@ -5,7 +5,7 @@ module.exports = class Heatlink extends Homey.Device {
     onInit() {
         this.registerCapabilityListener('target_temperature', this.onCapabilityTargetTemperature.bind(this));
         homewizardConnection.registerListener(() => {
-            console.log('update avaiable')
+            console.log('update available')
             if (this.getCapabilityValue('measure_temperature') !== homewizardConnection.heatlink.roomTemperature) {
                 console.log('updated measure_temperature to', homewizardConnection.heatlink.roomTemperature);
 ;                this.setCapabilityValue('measure_temperature', homewizardConnection.heatlink.roomTemperature)
