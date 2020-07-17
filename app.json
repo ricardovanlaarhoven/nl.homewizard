@@ -1,0 +1,54 @@
+{
+  "id": "nl.homewizard",
+  "version": "1.0.0",
+  "compatibility": ">=3.0.0",
+  "sdk": 2,
+  "name": {
+    "en": "homewizard"
+  },
+  "description": {
+    "en": "Adds homewizard support"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Ricardo van Laarhoven",
+    "email": "ricardo1994@gmail.com"
+  },
+  "drivers": [
+    {
+      "id": "heatlink",
+      "class": "heater",
+      "capabilities": [
+        "target_temperature",
+        "measure_temperature"
+      ],
+      "name": {
+        "en": "Heatlink"
+      },
+      "images": {
+        "large": "/drivers/heatlink/assets/images/large.png",
+        "small": "/drivers/heatlink/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ]
+}
