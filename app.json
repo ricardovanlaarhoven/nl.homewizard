@@ -14,8 +14,8 @@
   ],
   "permissions": [],
   "images": {
-    "large": "/assets/images/large.png",
-    "small": "/assets/images/small.png"
+    "large": "/assets/images/large.jpg",
+    "small": "/assets/images/small.jpg"
   },
   "author": {
     "name": "Ricardo van Laarhoven",
@@ -33,8 +33,8 @@
         "en": "Heatlink"
       },
       "images": {
-        "large": "/drivers/heatlink/assets/images/large.png",
-        "small": "/drivers/heatlink/assets/images/small.png"
+        "large": "/drivers/heatlink/assets/images/large.jpg",
+        "small": "/drivers/heatlink/assets/images/small.jpg"
       },
       "pair": [
         {
