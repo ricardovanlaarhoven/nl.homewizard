@@ -23,7 +23,6 @@ module.exports = class HomewizardConnector {
     }
 
     async setTemperature(temperature) {
-        console.log('setting temp', temperature)
         const response = await fetch(`http://${this.ip}/${this.password}/hl/0/settarget/${temperature}`);
         const json = await response.json();
         if (json.status !== 'ok') {

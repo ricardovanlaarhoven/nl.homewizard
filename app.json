@@ -1,6 +1,6 @@
 {
   "id": "nl.homewizard",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "name": {
@@ -27,10 +27,13 @@
       "class": "heater",
       "capabilities": [
         "target_temperature",
-        "measure_temperature"
+        "measure_temperature",
+        "measure_water_temperature",
+        "measure_water_pressure"
       ],
       "name": {
-        "en": "Heatlink"
+        "en": "Heatlink",
+        "nl": "Heatlink"
       },
       "images": {
         "large": "/drivers/heatlink/assets/images/large.jpg",
@@ -50,5 +53,31 @@
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "measure_water_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Water pressure",
+        "nl": "Waterdruk"
+      },
+      "insights": true,
+      "uiComponent": null,
+      "getable": true,
+      "setable": false,
+      "units": "bar"
+    },
+    "measure_water_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Water temperature",
+        "nl": "Watertemperatuur"
+      },
+      "insights": true,
+      "uiComponent": null,
+      "getable": true,
+      "setable": false,
+      "units": "°C"
+    }
+  }
 }
