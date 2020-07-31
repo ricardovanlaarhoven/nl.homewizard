@@ -3,10 +3,13 @@
     "class": "heater",
     "capabilities": [
         "target_temperature",
-        "measure_temperature"
+        "measure_temperature",
+        "measure_water_temperature",
+        "measure_water_pressure"
     ],
     "name": {
-        "en": "Heatlink"
+        "en": "Heatlink",
+        "nl": "Heatlink"
     },
     "images": {
         "large": "/drivers/heatlink/assets/images/large.jpg",

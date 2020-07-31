@@ -27,10 +27,13 @@
       "class": "heater",
       "capabilities": [
         "target_temperature",
-        "measure_temperature"
+        "measure_temperature",
+        "measure_water_temperature",
+        "measure_water_pressure"
       ],
       "name": {
-        "en": "Heatlink"
+        "en": "Heatlink",
+        "nl": "Heatlink"
       },
       "images": {
         "large": "/drivers/heatlink/assets/images/large.jpg",
@@ -50,5 +53,29 @@
         }
       ]
     }
-  ]
+  ],
+  "capabilities": {
+    "measure_water_pressure": {
+      "type": "number",
+      "title": {
+        "en": "Water pressure",
+        "nl": "Waterdruk"
+      },
+      "insights": true,
+      "uiComponent": null,
+      "getable": true,
+      "setable": false
+    },
+    "measure_water_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Water temperature",
+        "nl": "Watertemperatuur"
+      },
+      "insights": true,
+      "uiComponent": null,
+      "getable": true,
+      "setable": false
+    }
+  }
 }

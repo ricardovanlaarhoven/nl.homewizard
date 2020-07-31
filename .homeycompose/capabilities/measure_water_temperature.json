@@ -1,0 +1,12 @@
+{
+    "type": "number",
+    "title": {
+        "en": "Water temperature",
+        "nl": "Watertemperatuur"
+    },
+    "insights": true,
+    "uiComponent": null,
+    "getable": true,
+    "setable": false,
+    "units": "°C"
+}
