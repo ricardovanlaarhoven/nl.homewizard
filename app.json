@@ -24,7 +24,7 @@
   "drivers": [
     {
       "id": "heatlink",
-      "class": "heater",
+      "class": "thermostat",
       "capabilities": [
         "target_temperature",
         "measure_temperature"
