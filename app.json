@@ -1,6 +1,6 @@
 {
   "id": "nl.homewizard",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "name": {
@@ -64,7 +64,8 @@
       "insights": true,
       "uiComponent": null,
       "getable": true,
-      "setable": false
+      "setable": false,
+      "units": "bar"
     },
     "measure_water_temperature": {
       "type": "number",
@@ -75,7 +76,8 @@
       "insights": true,
       "uiComponent": null,
       "getable": true,
-      "setable": false
+      "setable": false,
+      "units": "°C"
     }
   }
 }
