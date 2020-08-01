@@ -19,7 +19,6 @@ module.exports = class HomewizardConnector {
         return new Promise((resolve, reject) => {
             const ip = this.getIp();
             const password = this.getPassword();
-            console.log(ip, password);
             const url = `http://${ip}/${password}`;
             if (!ip || !password) {
                 return reject('no-info');
