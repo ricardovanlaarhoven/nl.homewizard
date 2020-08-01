@@ -1,9 +1,9 @@
 const fetch = require('node-fetch');
 const Heatlink = require('./models/Heatlink.js');
 module.exports = class HomewizardConnector {
-    constructor(ip, password) {
-        this.ip = ip;
-        this.password = password;
+    constructor(ipGetter, passwordGetter) {
+        this.getIp = ipGetter;
+        this.getPassword = passwordGetter;
         this.listeners = [];
     }
 
@@ -15,16 +15,36 @@ module.exports = class HomewizardConnector {
         this.listeners.forEach((callback) => callback());
     }
 
+    call(call) {
+        return new Promise((resolve, reject) => {
+            const ip = this.getIp();
+            const password = this.getPassword();
+            console.log(ip, password);
+            const url = `http://${ip}/${password}`;
+            if (!ip || !password) {
+                return reject('no-info');
+            }
+            fetch(`${url}/${call}`).then(async response => {
+                const json = await response.json();
+                if (json.status !== 'ok') {
+                    return reject(json.status);
+                }
+                resolve(json);
+            }).catch(e => {
+                reject(e);
+            });
+        });
+    }
+
     async getStatus() {
-        const response = await fetch(`http://${this.ip}/${this.password}/get-status`);
-        const json = await response.json();
+        const json = await this.call('get-status');
         this.setStatus(json);
         this.callAlListeners();
+        return json;
     }
 
     async setTemperature(temperature) {
-        const response = await fetch(`http://${this.ip}/${this.password}/hl/0/settarget/${temperature}`);
-        const json = await response.json();
+        const json = await this.call(`hl/0/settarget/${temperature}`);
         if (json.status !== 'ok') {
             throw 'heatlink settarget failed';
         }
