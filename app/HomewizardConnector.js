@@ -45,9 +45,7 @@ module.exports = class HomewizardConnector {
     }
 
     async getMeterReadings() {
-        const json = await this.call('el/get/0/readings').catch((e) => {
-            console.log('error', e);
-        });
+        const json = await this.call('el/get/0/readings');
         return new Readings(json.response);
     }
 
