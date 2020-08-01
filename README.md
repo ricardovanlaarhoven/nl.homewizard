@@ -18,7 +18,7 @@ You can also watch or star my project over there to get notifications about upda
 
 ## Supported devices
 - Heatlink
-
+- Energylink
 
 ## Development
 Make sure you have installed the homey sdk via npm (https://developer.athom.com/)

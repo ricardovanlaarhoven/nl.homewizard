@@ -3,8 +3,26 @@
     "class": "sensor",
     "capabilities": [
         "meter_power",
-        "meter_gas"
+        "meter_gas",
+        "measure_power.usage",
+        "measure_power.netUsage",
+        "measure_power.s1Usage",
+        "measure_power.s2Usage"
     ],
+    "capabilitiesOptions": {
+        "measure_power.usage": {
+            "title": {"en": "Usage", "nl":  "Verbruik"}
+        },
+        "measure_power.netUsage": {
+            "title": {"en": "Net usage", "nl":  "Netto verbruik"}
+        },
+        "measure_power.s1Usage": {
+            "title": {"en": "Usage S1", "nl":  "Verbruik S1"}
+        },
+        "measure_power.s2Usage": {
+            "title": {"en": "Usage S2", "nl":  "Verbruik S2"}
+        }
+    },
     "name": {
         "en": "Energylink",
         "nl": "Energylink"

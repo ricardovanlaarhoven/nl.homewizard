@@ -7,6 +7,8 @@ module.exports = class HomewizardConnector {
         this.getIp = ipGetter;
         this.getPassword = passwordGetter;
         this.listeners = [];
+        this.heatlink = null;
+        this.energylink = null;
     }
 
     registerListener(callback) {
@@ -59,6 +61,6 @@ module.exports = class HomewizardConnector {
 
     setStatus(json) {
         this.heatlink = new Heatlink(json.response.heatlinks[0]);
-        this.energylink = new Energylink(json.response.energylink[0]);
+        this.energylink = new Energylink(json.response.energylinks[0]);
     }
 };
