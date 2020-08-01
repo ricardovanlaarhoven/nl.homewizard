@@ -4,22 +4,40 @@
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "name": {
-    "en": "homewizard"
+    "en": "Homewizard",
+    "nl": "Homewizard"
+  },
+  "tags": {
+    "en": [
+      "homewizard",
+      "energy",
+      "thermostat"
+    ]
   },
   "description": {
-    "en": "Adds homewizard support"
+    "en": "A lightway app for Homewizards energylink and heatlink",
+    "nl": "Een lichtgewicht app voor de energylink en heatlink van Homewizard"
   },
   "category": [
-    "tools"
+    "climate",
+    "energy"
   ],
+  "author": {
+    "name": "Ricardo van Laarhoven",
+    "email": "ricardo1994@gmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Ricardo van Laarhoven",
+        "email": "ricardo1994@gmail.com"
+      }
+    ]
+  },
   "permissions": [],
   "images": {
     "large": "/assets/images/large.jpg",
     "small": "/assets/images/small.jpg"
-  },
-  "author": {
-    "name": "Ricardo van Laarhoven",
-    "email": "ricardo1994@gmail.com"
   },
   "drivers": [
     {
