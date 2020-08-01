@@ -1,8 +1,9 @@
 {
     "id": "energylink",
-    "class": "??",
+    "class": "sensor",
     "capabilities": [
-        "measure_power"
+        "meter_power",
+        "meter_gas"
     ],
     "name": {
         "en": "Energylink",

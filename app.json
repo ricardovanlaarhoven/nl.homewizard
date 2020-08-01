@@ -23,6 +23,35 @@
   },
   "drivers": [
     {
+      "id": "energylink",
+      "class": "sensor",
+      "capabilities": [
+        "meter_power",
+        "meter_gas"
+      ],
+      "name": {
+        "en": "Energylink",
+        "nl": "Energylink"
+      },
+      "images": {
+        "large": "/drivers/energylink/assets/images/large.jpg",
+        "small": "/drivers/energylink/assets/images/small.jpg"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "heatlink",
       "class": "thermostat",
       "capabilities": [
