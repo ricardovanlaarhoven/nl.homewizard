@@ -9,6 +9,7 @@ My goal is to atleast support the devices you can't connect directly to homey, t
 ## Installation
 Unfortunately this app is not accepted to the homey app store because there already is a homewizard app.
 If you'd like a lightweight app with only devices that are not supported directly on homey (heatlink and energylink) you can still install this app directly on your homey without the app store.
+You can find all info about installing an app via the CLI here: https://community.athom.com/t/how-to-cli-install-method/198
 
 1. Make sure you have npm on your computer: https://www.npmjs.com/get-npm
 2. Make sure you have the homey sdk on your computer by going to your CLI and execute `npm install -g homey`
