@@ -6,15 +6,18 @@ class Homewizard extends Homey.App {
 
     async onInit() {
         let lastError = 0;
+        let errorCount = 0;
         setInterval(async () => {
             try {
                 const homewizardConnection = require('./app/HomewizardConnection.js');
                 await homewizardConnection.getStatus();
             } catch (e) {
+                errorCount ++;
                 if (e === 'failed') {
-                    if (lastError !== 1)
+                    if (lastError !== 1 && errorCount > 5) {
                         new Homey.Notification({excerpt: 'Your Homewizard password is incorrect'}).register();
-                    lastError = 1;
+                        lastError = 1;
+                    }
                     return;
                 } else if (e === 'no-info') {
                     if (lastError !== 2)
@@ -22,15 +25,17 @@ class Homewizard extends Homey.App {
                     lastError = 2;
                     return;
                 } else {
-                    if (lastError !== 3)
+                    if (lastError !== 3 && errorCount > 5) {
                         new Homey.Notification({excerpt: 'Your Homewizard ip is incorrect or unavailable'}).register();
-                    lastError = 3;
+                        lastError = 3;
+                    }
                     return;
                 }
             }
             if (lastError !== 0)
                 new Homey.Notification({excerpt: 'Homewizard is online again!'}).register();
             lastError = 0;
+            errorCount = 0;
         }, 10000);
     }
 }

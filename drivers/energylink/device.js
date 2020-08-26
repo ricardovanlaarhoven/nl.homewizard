@@ -3,10 +3,18 @@ const homewizardConnection = require('./../../app/HomewizardConnection.js');
 
 module.exports = class Energylink extends Homey.Device {
     onInit() {
+        /*
+        We need to add capabilities that were not defined from the beginning
+         */
+        this.addCapability('measure_power');
+
         homewizardConnection.registerListener(() => {
             if (!homewizardConnection.energylink.energy)
                 return;
 
+            if (this.getCapabilityValue('measure_power') !== homewizardConnection.energylink.energy.usage) {
+                this.setCapabilityValue('measure_power', homewizardConnection.energylink.energy.usage);
+            }
             if (this.getCapabilityValue('measure_power.usage') !== homewizardConnection.energylink.energy.usage) {
                 this.setCapabilityValue('measure_power.usage', homewizardConnection.energylink.energy.usage);
             }

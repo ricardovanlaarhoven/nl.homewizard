@@ -1,6 +1,6 @@
 {
   "id": "nl.homewizard",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "compatibility": ">=3.0.0",
   "sdk": 2,
   "name": {
@@ -46,11 +46,15 @@
       "capabilities": [
         "meter_power",
         "meter_gas",
+        "measure_power",
         "measure_power.usage",
         "measure_power.netUsage",
         "measure_power.s1Usage",
         "measure_power.s2Usage"
       ],
+      "energy": {
+        "cumulative": true
+      },
       "capabilitiesOptions": {
         "measure_power.usage": {
           "title": {

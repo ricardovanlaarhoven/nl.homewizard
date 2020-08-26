@@ -4,11 +4,15 @@
     "capabilities": [
         "meter_power",
         "meter_gas",
+        "measure_power",
         "measure_power.usage",
         "measure_power.netUsage",
         "measure_power.s1Usage",
         "measure_power.s2Usage"
     ],
+    "energy": {
+        "cumulative": true
+    },
     "capabilitiesOptions": {
         "measure_power.usage": {
             "title": {"en": "Usage", "nl":  "Verbruik"}
